@@ -18,12 +18,10 @@ colnames = ['Label', 'Values']
 colname = ['Values']
 
 
-train = pd.read_csv('output.csv', names=colnames, header=None)
-final = pd.read_csv('final.csv', names=colname, header=None)
+train = pd.read_csv('datasets/train.csv', names=colnames, header=None)
+# final = pd.read_csv('datasets/test_just_reviews.csv', names=colname, header=None)
 
-#train = pd.read_csv('output.csv', delimiter='\t')
 print(train.shape)
-#print(train.head())
 
 
 MAX_LEN = 256
@@ -223,7 +221,7 @@ print('This tutorial is completed')
 
 
 
-new_data = pd.read_csv('final.csv', names=colname, header=None)
+new_data = pd.read_csv('datasets/test_just_reviews.csv', names=colname, header=None)
 new_texts = new_data['Values']
 
 
