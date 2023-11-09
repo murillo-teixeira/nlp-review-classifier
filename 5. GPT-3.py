@@ -1,10 +1,12 @@
+#  Code that uses GPT-3.5 and his fine-tuned version to classify text
+
 import openai
 
 # Set your API key
-openai.api_key = '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'
+openai.api_key = 'sk-xxxxxxxxxxx'
 
 # Replace 'your-model-id' with your fine-tuned model ID
-model_id = 'ft:gpt-3.5-turbo-0613:personal::8CB1fZAX'
+model_id = 'ft:gpt-3.5-turbo-0613:personal::xxxxxxx'
 
 questions = []
 

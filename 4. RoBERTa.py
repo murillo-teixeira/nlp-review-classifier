@@ -1,3 +1,5 @@
+# RoBERTa implementation of the text classifier, the one used to generate results.csv
+
 import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
@@ -134,7 +136,8 @@ def train(epoch):
     nb_tr_steps = 0
     nb_tr_examples = 0
     model.train()
-    for _,data in tqdm(enumerate(training_loader, 0)):
+    for i,data in tqdm(enumerate(training_loader, 0)):
+        print(i)
         ids = data['ids'].to(device, dtype = torch.long)
         mask = data['mask'].to(device, dtype = torch.long)
         token_type_ids = data['token_type_ids'].to(device, dtype = torch.long)
